@@ -68,7 +68,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   <br>
 </h4>
 
-# API Document_v0.1
+# API Document
 
 ## 1. Package
 
