@@ -53,7 +53,7 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 
 ## Get started :rocket:
 
-To get started, review sections below in the 'README' files in the [Stipop_Sticker_Store API](https://github.com/stipop-development/STICKER_STORE_API/blob/master/README.md) repository.
+아래 API Document를 통해 response 확인 및 서비스에 스티커 스토어를 적용할 수 있습니다. 개발 진행시 발생되는 에러/버그는 이슈에 등록해주시면 24시간 내로 응답됩니다. 새로 추가되는 업데이트는 하단 'Announcement'란에 명시됩니다. 추가 문의는 biz@stipop.io로 해주시기 바랍니다.
 
 
 <h4 align="center">
