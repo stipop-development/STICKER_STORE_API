@@ -37,8 +37,8 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 
 
 ## Key Features
-* Sticker Package
-  - 100,000 stickers uploaded by 5,000 global artists around the world. 
+* 스티커 인기순위 조회
+  - Pricing plan에 따라 20~3,000 패키지 리스트 조회
   - Customized sticker packs that capture the preferences of your target users, recommended and assorted through Stipop’s millions of user data. 
 * Multi-language Contents
   - English/Spanish/Hindi/Russian/German/French/Portuguese/Italian/Simplified-Chinese/Traditional-Chinese/Catonese/Japanese/Thai/Indonesian
