@@ -51,7 +51,7 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 
 ## Get started :rocket:
 
-To get started, review sections below in the 'README' files in the [Stipop_Sticker_API](https://github.com/stipop-development/Stipop_Sticker_API) repository.
+To get started, review sections below in the 'README' files in the [Stipop_Sticker_Store API](https://github.com/stipop-development/STICKER_STORE_API/blob/master/README.md) repository.
 
 
 
