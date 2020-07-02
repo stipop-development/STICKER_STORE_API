@@ -58,7 +58,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
 
 
 ## 1. Package
-# 1.1 Package Ranking List 스티커팩 인기순위 조회
+### 1.1 Package Ranking List 스티커팩 인기순위 조회
 
 * **URL**
 
