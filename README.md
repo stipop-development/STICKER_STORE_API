@@ -39,16 +39,14 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 ## Key Features
 * 스티커 인기순위 조회
   - Pricing plan에 따라 20~3,000 패키지 리스트 조회
-  - Customized sticker packs that capture the preferences of your target users, recommended and assorted through Stipop’s millions of user data. 
-* Multi-language Contents
-  - English/Spanish/Hindi/Russian/German/French/Portuguese/Italian/Simplified-Chinese/Traditional-Chinese/Catonese/Japanese/Thai/Indonesian
-/Korean
-* Regional Best
-  - Top 100 download list provided in specified langauge speaking countries
-* Daily Update
-  - All sticker list updated in a daily basis with new stickers added in automatically
-* Favorites (preparing)
-  - API to provide list of stickers used the most by a specific end user
+  - 키워드, 카테고리, 국가, 언어 등의 파라미터를 활용해 세밀한 스티커 리스트 조회 가능
+  - 총 25개국 5,000명의 작가가 디자인한 스티커
+* 다양한 언어 제공
+  - English/Spanish/Hindi/Russian/German/French/Portuguese/Italian/Chinese/Catonese/Japanese/Thai/Indonesian/Korean
+* 스티커 구매 정보
+  - 쉬운 스티커 판매 모델을 적용한 빠른 개발 및 유료 스티커 수익화
+* 스티커 전송 통계
+  - 스티커 전송 통계를 통해 보다 세밀한 스티커 추천과 이를 통한 수익 극대화
 
 
 ## Get started :rocket:
