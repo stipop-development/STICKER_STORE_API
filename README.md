@@ -58,14 +58,9 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
 
 <h4 align="center">
   <br>
-  <br>
 </h4>
 
 # Endpoints
-
-<h4 align="center">
-  <br>
-</h4>
 
 ## 1. Package
 
