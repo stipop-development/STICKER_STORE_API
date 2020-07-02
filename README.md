@@ -269,7 +269,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
   ```
   
 ## 2 Donwload 구매 정보
-## 2.1 Download 스티커팩 구매
+## 2.1 Download 스티커팩 구매정보 전달
 
 * **URL**
 
@@ -359,7 +359,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
 * **Sample Call:**
 
   ```curl
-  curl --location --request POST "https://bapi.stipop.io/store/v0.1/download/118?userId=9937&price=500&country=kr" \ --header "apikey:xxxxxxxxx"
+  curl --location --request POST "https://bapi.stipop.io/store/v0.1/download/118?userId=9937" \ --header "apikey:xxxxxxxxx"
   ```
   
 ## 2.2 Download 구매내역 조회
@@ -522,7 +522,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
 
 
 ## 4 Common
-## 4.1 Cateogry 조회
+## 4.1 Category 조회
 
 
 * **URL**
