@@ -620,7 +620,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 > 기타 문의사항은 <biz@stipop.io>에 연락 부탁드립니다.
 
 - [**bug issue**](https://github.com/stipop-development/Sticker_Store_API/issues/new?template=bug_report.md) 생성하기
-- [**feature issue**](https://github.com/stipop-development/Sticker_Store_API/blob/master/.github/ISSUE_TEMPLATE/feature_request.md) 생성하기
+- [**feature request**](https://github.com/stipop-development/Sticker_Store_API/issues/new?assignees=&labels=&template=feature_request.md) 생성하기
 
 
 ## License
