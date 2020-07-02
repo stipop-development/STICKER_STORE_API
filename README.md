@@ -372,7 +372,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   curl --location --request POST "https://bapi.stipop.io/store/v0.1/download/118?userId=9937" \ --header "apikey:xxxxxxxxx"
   ```
   
-### 2.2 Download History 구매내역 조회
+### 2.2 Download History 구매 내역 조회
+
+사용자의 스티커 구매 내역 조회를 통해 사용자의 device 변경 등의 상황에도 리스트를 기록해 보여줄 수 있습니다. 추후 업데이트 되는 0.2 버전에서는 구매한 스티커를 hide 하는 기능과 순서를 바꾸는 기능이 추가될 예정입니다. 
 
 * **URL**
 
@@ -456,6 +458,8 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 ## 3 Analytics
 ### 3.1 Sticker Send Analytics 스티커 전송 통계
 
+앱 내에서 사용자가 사용하는 스티커를 데이터화 하는 것은 매우 중요합니다. 앞으로 사용자에게 보다 개인화된 콘텐츠를 제안하고 스토어 성능을 높일 수 있기 때문입니다. 스티팝은 사용자가 전송한 데이터를 통해 이 기능들을 대시보드에 제공합니다. 
+
 * **URL**
 
   /v0.1/store/analytics/send/:stickerId
@@ -533,6 +537,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 ## 4 Common
 ### 4.1 Category 조회
 
+모든 스티커는 카테고리에 정리되어 있습니다. 카테고리별로 스티커를 리스트하여 사용자에게 보여주면 스토어의 성능이 높아질 수 있습니다. 카테고리 API를 통해 보다 다양하고 효과적인 스토어를 만들어보세요.
 
 * **URL**
 
@@ -607,14 +612,14 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 
 
 ## Announcements :loudspeaker:
-Please check out [Annoucements](https://github.com/stipop-development/Stipop_Sticker_API/wiki/Announcements) for recent changes.
+[Annoucements](https://github.com/stipop-development/Sticker_Store_API/wiki/Announcements)를 통해 최신 업데이트 내용을 확인할 수 있습니다.
 
 ## Opening Issues :warning:
 
-> Only use the GitHub Issues section if you discovered **issues with the code itself**. Do not mistake the Issues page as a help desk. You can ask for help at [Stack Overflow](https://stackoverflow.com/).  
-> For support, please contact <webmaster@stipop.io>.
+> 해당 Github Repository에 Bug 혹은 새로운 Feature 제안 Issue를 생성하실 수 있습니다.
+> 기타 문의사항은 <biz@stipop.io>에 연락 부탁드립니다.
 
-- Create a [**general issue**](https://github.com/stipop-development/Stipop_Sticker_API/issues/new?template=general.md)
+- Create a [**bug issue**](https://github.com/stipop-development/Sticker_Store_API/issues/new?template=general.md)
 
 
 ## License
