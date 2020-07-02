@@ -29,7 +29,7 @@
 ![Works with JavaScript](https://img.shields.io/badge/Works_with-JavaScript-red?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/stipop-development/Stipop_Sticker_API?style=flat-square)
 
-> Stipop provides a powerful and flexible sticker API that enables companies to add stickers onto their apps and websites with minimum effort and maximum effect.
+> 스티팝 스티커 스토어 API를 통해 서비스에서 새로운 수익을 창출할 수 있습니다.
 
 Stickers are one of the most powerful visual contents you can find in the digital world. With more than 50 billion being sent everyday, and unlike GIFs, it brings emotion into online communicaton, because a specific artist created it with a purpose (for online communication, character etc.) this makes stickers very unique and usable and tailored to all tastes. 
 
