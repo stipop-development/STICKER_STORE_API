@@ -118,7 +118,6 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
                   "isNew": "N",                                  //신규출시 여부
                   "artistName": "pinono",                        //작가 이름
                   "language": "Spanish",                         //언어
-                  "isFree": "N",                                 //공짜 스티커 여부 - 스티팝 내부 기준. 별도 설정시 문의.
                   "isDownload": "Y"                              //구매 여부
               },
               {
@@ -131,7 +130,6 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
                   "isNew": "N",
                   "artistName": "annapig",
                   "language": "Spanish",
-                  "isFree": "N"
               },
               `......`
           ]
@@ -219,7 +217,6 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
             "packageKeywords": "Stuart,Sticker",    //스티커팩 키워드
             "isNew": "N",                           //신규출시여부
             "language": "English",                  //언어
-            "isFree": "Y",                          //공짜 스티커 여부
             "isDownload": "Y",                              //구매 여부
             "stickers": [                           //스티커팩 스티커 리스트
                 {
@@ -407,7 +404,6 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
                 "isNew": "N",
                 "artistName": "MightyCat",
                 "language": "English",
-                "isFree": "Y",
                 "isDownload": "Y"                              //구매 여부
             }
           ]
