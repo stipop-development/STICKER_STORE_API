@@ -10,7 +10,7 @@
   <a href="#Intro">Intro</a> •
   <a href="#Key-Features">Key Features</a> •
   <a href="#get-started-rocket">Get Started</a> •
-  <a href="#1-sticker-pack-api-default-best-100">Pack API</a> •
+  <a href="#1. Package">1. Package</a> •
   <a href="#2-sticker-id-api">ID API</a> •
   <a href="#announcements-loudspeaker">Announcements</a> •
   <a href="#opening-issues-warning">Issues</a> •
