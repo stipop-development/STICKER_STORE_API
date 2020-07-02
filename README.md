@@ -56,6 +56,7 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 To get started, review sections below in the 'README' files in the [Stipop_Sticker_Store API](https://github.com/stipop-development/STICKER_STORE_API/blob/master/README.md) repository.
 
 
+# Endpoints
 
 ## 1. Package
 ### 1.1 Package Ranking List 스티커팩 인기순위 조회
@@ -169,7 +170,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
   ```
   
 
-## 1.2 Package Info 스티커팩 상세
+### 1.2 Package Info 스티커팩 상세
 
 * **URL**
 
@@ -268,7 +269,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
   ```
   
 ## 2 Donwload 구매 정보
-## 2.1 Download 스티커팩 구매정보 전달
+### 2.1 Download Sticker 스티커팩 구매정보 전달
 
 * **URL**
 
@@ -361,7 +362,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
   curl --location --request POST "https://bapi.stipop.io/store/v0.1/download/118?userId=9937" \ --header "apikey:xxxxxxxxx"
   ```
   
-## 2.2 Download 구매내역 조회
+### 2.2 Download History 구매내역 조회
 
 * **URL**
 
@@ -443,7 +444,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
   ```  
   
 ## 3 Analytics
-## 3.1 Sticker Send Analytics 스티커 전송 통계
+### 3.1 Sticker Send Analytics 스티커 전송 통계
 
 * **URL**
 
@@ -520,7 +521,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
 
 
 ## 4 Common
-## 4.1 Category 조회
+### 4.1 Category 조회
 
 
 * **URL**
