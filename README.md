@@ -31,10 +31,7 @@
 
 > 스티팝 스티커 스토어 API를 통해 서비스에서 새로운 수익을 창출할 수 있습니다.
 
-Stickers are one of the most powerful visual contents you can find in the digital world. With more than 50 billion being sent everyday, and unlike GIFs, it brings emotion into online communicaton, because a specific artist created it with a purpose (for online communication, character etc.) this makes stickers very unique and usable and tailored to all tastes. 
-
-Seeing how sticker are a useful kind of media, we as a team started a platform, where stickers and sticker lovers can play about. Our product began as an app for messenger users to download stickers for their personal use. Now that there is more than 5,000 sticker artists participating from 15 different countries and the total stickers accumulate to 100,000 we thought it would be best that other companies should also be able to provide stickers to their own users.
-
+스티커는 가장 효과적이고 쉬운 감정표현이 가능합니다. 때문에 스티커는 온라인 이용자들에게 필수적인 요소입니다. 카카오톡에서만 사용되던 스티커를 당사 서비스에서 제공해보세요. 쉽고 빠른 설치를 통해 새로운 수익을 창출 할 수 있습니다. 저희는 스티커를 통해 이용자들이 온라인에서 더 효과적으로 커뮤니케이션 할 수 있도록 돕습니다. 
 
 ## Key Features
 * 스티커 인기순위 조회
