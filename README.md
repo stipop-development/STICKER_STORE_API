@@ -26,6 +26,7 @@
 
 ![Works with Android](https://img.shields.io/badge/Works_with-Android-green?style=flat-square)
 ![Works with iOS](https://img.shields.io/badge/Works_with-iOS-blue?style=flat-square)
+![Works with JavaScript](https://img.shields.io/badge/Works_with-JavaScript-red?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/stipop-development/Stipop_Sticker_API?style=flat-square)
 
 > Stipop provides a powerful and flexible sticker API that enables companies to add stickers onto their apps and websites with minimum effort and maximum effect.
