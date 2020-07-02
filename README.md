@@ -55,12 +55,13 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 
 To get started, review sections below in the 'README' files in the [Stipop_Sticker_Store API](https://github.com/stipop-development/STICKER_STORE_API/blob/master/README.md) repository.
 
-  <br>
-    <br>
-      <br>
+
+
+
 # Endpoints
 
 ## 1. Package
+
 ### 1.1 Package Ranking List 스티커팩 인기순위 조회
 
 * **URL**
