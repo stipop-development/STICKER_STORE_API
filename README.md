@@ -60,7 +60,7 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
   <br>
 </h4>
 
-# Endpoints
+# API Document_v0.1
 
 ## 1. Package
 
