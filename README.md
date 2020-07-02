@@ -1,6 +1,5 @@
 <h1 align="center">
   Stipop
-	<h4 align="center">Generate revenue and propel user engagement with Stipop Store API</h4>
   <br>
 </h1>
 
