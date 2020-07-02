@@ -56,10 +56,10 @@ Seeing how sticker are a useful kind of media, we as a team started a platform, 
 To get started, review sections below in the 'README' files in the [Stipop_Sticker_Store API](https://github.com/stipop-development/STICKER_STORE_API/blob/master/README.md) repository.
 
 
-<h1 align="center">
+<h4 align="center">
   <br>
   <br>
-</h1>
+</h4>
 
 # Endpoints
 
