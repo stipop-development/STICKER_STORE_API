@@ -66,7 +66,7 @@ To get started, review sections below in the 'README' files in the [Stipop_Stick
 
 ### 1.1 Package Ranking List 스티커팩 인기순위 조회
 
-asdfasdfasdf
+스티커팩 인기순위 리스트는 적용된 Pricing Plan에 따라 20개 혹은 200개의 스티커를 불러올 수 있습니다. 스티팝에 업로드 된 모든 스티커는 전 세계 작가들이 제작한 스티커이며 승인되기 위해서는 스티팝 콘텐츠 가이드라인을 통과해야만 합니다. 디폴트로 적용된 인기순위는 스티팝 앱 내 데이터를 통해 정해진 순위이며 개발이 진행됨에 따라 당사 서비스 다운로드를 기준으로 순위가 정해질 수 있습니다. 
 
 * **URL**
 
