@@ -14,11 +14,6 @@
   <a href="#opening-issues-warning">Issues</a> •
   <a href="#license">License</a>
 	  <br>
-	  <a href="#1-package">1. Package</a> •
-</p>
-
-
-<p align="center">
   <a href="#1-package">1. Package</a> •
   <a href="#2-donwload-구매-정보">2. Download</a> •
   <a href="#3-analytics">3. Analytics</a> •
