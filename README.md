@@ -4,7 +4,7 @@
 </h1>
 
 
-<h4 align="center">Propel user engagement, retention, and conversion with stipop sticker API</h4>
+<h4 align="center">Generate revenue and propel user engagement with Stipop Store API</h4>
 
 <p align="center">
   <a href="#Intro">Intro</a> •
