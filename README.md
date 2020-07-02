@@ -27,7 +27,7 @@
 ![Works with Android](https://img.shields.io/badge/Works_with-Android-green?style=flat-square)
 ![Works with iOS](https://img.shields.io/badge/Works_with-iOS-blue?style=flat-square)
 ![Works with JavaScript](https://img.shields.io/badge/Works_with-JavaScript-red?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/stipop-development/Stipop_Sticker_API?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/stipop-development/Sticker_Store_API?style=flat-square)
 
 > 스티팝 스티커 스토어 API를 통해 서비스에서 새로운 수익을 창출할 수 있습니다.
 
