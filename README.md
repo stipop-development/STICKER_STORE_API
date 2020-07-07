@@ -78,11 +78,19 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 
 # API Document
 
+Base Url: https://bapi.stipop.io
+Authentication: 스티팝 스토어 API는 API Key 인증을 통해 사용할 수 있습니다. API Key는 dashboard.stipop.io에서 회원가입 후 앱 별로 Unique API Key를 발급 받을 수 있습니다.
+
+API Key는 중요한 정보이니 외부 노출이 되지 않도록 신경써주시기 바랍니다. 특히 Github, blog 등 오픈된 공간에 공유하지 마세요.
+Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Auth Username Value로 제공하시면 됩니다. Password는 제공하지 않으셔도 됩니다.
+
+모든 API Request는 HTTPS를 통해 이뤄져야합니다. HTTP를 통한 Request는 작동하지 않습니다. 또한 Authentication이 되지 않은 Request 또한 작동하지 않습니다.
+
 ## 1. Package
 
-### 1.1 Package Ranking List 스티커팩 인기순위 조회
+### 1.1 Package Ranking List 스티커 팩 인기순위 조회
 
-스티커팩 인기순위 리스트는 적용된 Pricing Plan에 따라 20개 혹은 200개의 스티커를 불러올 수 있습니다. 스티팝에 업로드 된 모든 스티커는 전 세계 작가들이 제작한 스티커이며 승인되기 위해서는 스티팝 콘텐츠 가이드라인을 통과해야만 합니다. 디폴트로 적용된 인기순위는 스티팝 앱 내 데이터를 통해 정해진 순위이며 개발이 진행됨에 따라 당사 서비스 다운로드를 기준으로 순위가 정해질 수 있습니다. 
+스티커 팩 인기순위 리스트는 적용된 Pricing Plan에 따라 20개 혹은 200개의 스티커를 불러올 수 있습니다. 스티팝에 업로드 된 모든 스티커는 전 세계 작가들이 제작한 스티커이며 승인되기 위해서는 스티팝 콘텐츠 가이드라인을 통과해야만 합니다. 디폴트로 적용된 인기순위는 스티팝 앱 내 데이터를 통해 정해진 순위이며 개발이 진행됨에 따라 당사 서비스 다운로드를 기준으로 순위가 정해질 수 있습니다. 
 
 * **URL**
 
@@ -135,11 +143,11 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
       "body": {
           "packageList": [
               {
-                  "packageId": 2309,                             //스티커팩 아이디
-                  "packageName": "cada día",                     //스티커팩 이름
-                  "packageImg": "https://img....70AAeHBn4N.png", //스티커팩 대표 이미지
-                  "packageCategory": "Animation/Cartoon,Gag",    //스티커팩 카테고리
-                  "packageKeywords": "bonito,mono,bello,adorable,life,cute,lovely", //스티커팩 키워드
+                  "packageId": 2309,                             //스티커 팩 아이디
+                  "packageName": "cada día",                     //스티커 팩 이름
+                  "packageImg": "https://img....70AAeHBn4N.png", //스티커 팩 대표 이미지
+                  "packageCategory": "Animation/Cartoon,Gag",    //스티커 팩 카테고리
+                  "packageKeywords": "bonito,mono,bello,adorable,life,cute,lovely", //스티커 팩 키워드
                   "packageAnimated": "N",                        //움직이는 스티커 여부
                   "isNew": "N",                                  //신규출시 여부
                   "artistName": "pinono",                        //작가 이름
@@ -196,9 +204,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```
   
 
-### 1.2 Package Info 스티커팩 상세
+### 1.2 Package Info 스티커 팩 상세
 
-스티커는 팩으로 구성됩니다. 하나의 스티커 팩은 15~24개의 스티커를 가지고 있으며 스티커 팹 이름, 작가 정보, 스티커 정보, 대표 이미지 등으로 구성되어 있습니다. 스티커팩 상세 API를 통해 스티커 페이지를 만들어보세요.
+스티커는 팩으로 구성됩니다. 하나의 스티커 팩은 15~24개의 스티커를 가지고 있으며 스티커 팹 이름, 작가 정보, 스티커 정보, 대표 이미지 등으로 구성되어 있습니다. 스티커 팩 상세 API를 통해 스티커 페이지를 만들어보세요.
 
 * **URL**
 
@@ -241,16 +249,16 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
           "package": {
             "packageId": 118,                       //패키지 아이디
             "artistName": "MightyCat",              //작가명
-            "packageName": "Stuart",                //스티커팩 이름
-            "packageImg": "https://img....png",     //스티커팩 대표 이미지 url
+            "packageName": "Stuart",                //스티커 팩 이름
+            "packageImg": "https://img....png",     //스티커 팩 대표 이미지 url
             "packageAnimated": "N",                 //움직이는 스티커 여부
-            "packageCategory": "Animation/Cartoon", //스티커팩 카테고리 
-            "packageKeywords": "Stuart,Sticker",    //스티커팩 키워드
+            "packageCategory": "Animation/Cartoon", //스티커 팩 카테고리 
+            "packageKeywords": "Stuart,Sticker",    //스티커 팩 키워드
             "isNew": "N",                           //신규출시여부
             "language": "English",                  //언어
             "isDownload": "Y",                              //구매 여부
 	    "isWish": "N",					 //위시 여부
-            "stickers": [                           //스티커팩 스티커 리스트
+            "stickers": [                           //스티커 팩 스티커 리스트
                 {
                     "stickerId": 790,               //스티커 아이디
                     "packageId": 118,               
@@ -298,9 +306,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```
   
 
-### 1.3 Package Recent 스티커팩 최근조회
+### 1.3 Package Recent View 최근 조회 스티커 팩
 
-유저가 최근 조회한 스티커팩 15개
+유저가 최근 조회한 스티커 팩 15개 리스트입니다. 최근 조회 스티커 팩을 보여줌으로써 구매 전환율을 높일 수 있습니다.
 
 * **URL**
 
@@ -336,11 +344,11 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
       "body": {
           "packageList": [
 	      {
-                  "packageId": 2309,                             //스티커팩 아이디
-                  "packageName": "cada día",                     //스티커팩 이름
-                  "packageImg": "https://img....70AAeHBn4N.png", //스티커팩 대표 이미지
-                  "packageCategory": "Animation/Cartoon,Gag",    //스티커팩 카테고리
-                  "packageKeywords": "bonito,mono,bello,adorable,life,cute,lovely", //스티커팩 키워드
+                  "packageId": 2309,                             //스티커 팩 아이디
+                  "packageName": "cada día",                     //스티커 팩 이름
+                  "packageImg": "https://img....70AAeHBn4N.png", //스티커 팩 대표 이미지
+                  "packageCategory": "Animation/Cartoon,Gag",    //스티커 팩 카테고리
+                  "packageKeywords": "bonito,mono,bello,adorable,life,cute,lovely", //스티커 팩 키워드
                   "packageAnimated": "N",                        //움직이는 스티커 여부
                   "isNew": "N",                                  //신규출시 여부
                   "artistName": "pinono",                        //작가 이름
@@ -396,9 +404,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/package/recent/9937" \ --header "apikey:xxxxxxxxx"
   ```
 
-### 1.4 Package Sticker Send 최근 전송한 스티커
+### 1.4 Recent Sticker Send 최근 전송한 스티커
 
-유저가 최근 전송한 스티커 15개
+유저가 최근 전송한 스티커 15개 입니다. 해당 API는 스티커를 전송하는 키보드 섹션에 추가하면 유저가 최근 전송한 스티커를 편하게 다시 전송할 수 있게 도와줄 수 있습니다. 1.5 자주 쓰는 스티커 API와 함께 사용하면 더욱 좋습니다.
 
 * **URL**
 
@@ -477,9 +485,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/package/send/9937" \ --header "apikey:xxxxxxxxx"
   ```
 
-### 1.5 Package Sticker Frequently 자주 쓰는 스티커
+### 1.5 Frequently Used Stickers 자주 쓰는 스티커
 
-유저가 자주 쓰는 스티커 15개
+유저가 자주 쓰는 스티커 15개 입니다. 1.4 최근 사용한 스티커 API와 함께 사용하면 더욱 좋습니다. 이 API 또한 유저가 스티커를 전송하는 환경 (주로 키보드 섹션)에 도입하면 됩니다.
 
 * **URL**
 
@@ -562,7 +570,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 
   
 ## 2 Donwload 구매 정보
-### 2.1 Download Sticker 스티커팩 구매정보 전달
+### 2.1 Download Sticker 스티커 팩 구매정보 전달
 
 사용자들은 스티커 스토어 API에서 제공되는 스티커를 구매해 사용 할 수 있습니다. 스티커 구매는 접속중인 서비스에서 인앱 결제 혹은 서비스의 내부 코인 시스템을 통해 구매가 이뤄집니다. 구매 완료된 스티커는 해당 API를 통해 다운로드 할 수 있으며 이때 가격 정보가 스티팝에 제공됩니다. 스티팝과 수익 분배는 월 기준으로 익월에 진행되며 이는 스티팝 대시보드 (준비중)에서 자동으로 진행됩니다.
 
@@ -897,9 +905,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```
 
 ## 5 MySticker
-### 5.1 Wish Package 스티커팩 위시리스트에 추가, 삭제
+### 5.1 Wish Package 스티커 팩 위시리스트에 추가, 삭제
 
-스티커팩 위시리스트에 추가, 삭제
+스티커 팩 위시리스트에 추가, 삭제
 
 
 * **URL**
@@ -973,9 +981,9 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```
 
 
-### 5.2 Wish Package List 스티커팩 위시리스트 조회
+### 5.2 Wish Package List 스티커 팩 위시리스트 조회
 
-스티커팩 위시리스트 조회
+스티커 팩 위시리스트 조회
 
 
 * **URL**
