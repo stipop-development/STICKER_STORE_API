@@ -144,7 +144,8 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
                   "isNew": "N",                                  //신규출시 여부
                   "artistName": "pinono",                        //작가 이름
                   "language": "Spanish",                         //언어
-                  "isDownload": "Y"                              //구매 여부
+                  "isDownload": "Y",                             //구매 여부
+		  "isWish": "N"					 //위시 여부
               },
               {
                   "packageId": 2473,
@@ -156,6 +157,8 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
                   "isNew": "N",
                   "artistName": "annapig",
                   "language": "Spanish",
+		  "isDownload": "Y",                             
+		  "isWish": "N"					 
               },
               `......`
           ]
@@ -246,6 +249,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
             "isNew": "N",                           //신규출시여부
             "language": "English",                  //언어
             "isDownload": "Y",                              //구매 여부
+	    "isWish": "N",					 //위시 여부
             "stickers": [                           //스티커팩 스티커 리스트
                 {
                     "stickerId": 790,               //스티커 아이디
@@ -292,6 +296,270 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```curl
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/package/118?userId=9937&" \ --header "apikey:xxxxxxxxx"
   ```
+  
+
+### 1.3 Package Recent 스티커팩 최근조회
+
+유저가 최근 조회한 스티커팩 15개
+
+* **URL**
+
+  /v0.1/store/package/recent/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+          "packageList": [
+	      {
+                  "packageId": 2309,                             //스티커팩 아이디
+                  "packageName": "cada día",                     //스티커팩 이름
+                  "packageImg": "https://img....70AAeHBn4N.png", //스티커팩 대표 이미지
+                  "packageCategory": "Animation/Cartoon,Gag",    //스티커팩 카테고리
+                  "packageKeywords": "bonito,mono,bello,adorable,life,cute,lovely", //스티커팩 키워드
+                  "packageAnimated": "N",                        //움직이는 스티커 여부
+                  "isNew": "N",                                  //신규출시 여부
+                  "artistName": "pinono",                        //작가 이름
+                  "language": "Spanish",                         //언어
+                  "isDownload": "Y",                              //구매 여부
+		  "isWish": "N"					 //위시 여부
+              },
+              {
+                  "packageId": 2473,
+                  "packageName": "¿Cómo estás?",
+                  "packageImg": "https://img.....Ggdu7s3J15.gif",
+                  "packageCategory": "Phrases,Etc.",
+                  "packageKeywords": "¿Cómoestás?,letra",
+                  "packageAnimated": "Y",
+                  "isNew": "N",
+                  "artistName": "annapig",
+                  "language": "Spanish",
+		  "isDownload": "Y",                              
+		  "isWish": "N"					 
+              },
+              `......`
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/package/recent/9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
+### 1.4 Package Sticker Send 최근 전송한 스티커
+
+유저가 최근 전송한 스티커 15개
+
+* **URL**
+
+  /v0.1/store/package/send/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"stickerList": [
+            {
+                "stickerId": 3684,							//스티커 아이디
+                "packageId": 347,							//패키지 아이디
+                "stickerImg": "https://img.....l_08.png"	//스티커 이미지 주소
+            },
+            {
+                "stickerId": 3683,
+                "packageId": 347,
+                "stickerImg": "https://img...._07.png"
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/package/send/9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
+### 1.5 Package Sticker Frequently 자주 쓰는 스티커
+
+유저가 자주 쓰는 스티커 15개
+
+* **URL**
+
+  /v0.1/store/package/frequently/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"stickerList": [
+            {
+                "stickerId": 3684,							//스티커 아이디
+                "packageId": 347,							//패키지 아이디
+                "stickerImg": "https://img.....l_08.png",				//스티커 이미지 주소
+		"sendCnt": 3								//전송횟수
+            },
+            {
+                "stickerId": 3683,
+                "packageId": 347,
+                "stickerImg": "https://img...._07.png",
+		"sendCnt": 1
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/package/frequently/9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
   
 ## 2 Donwload 구매 정보
 ### 2.1 Download Sticker 스티커팩 구매정보 전달
@@ -436,7 +704,8 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
                 "isNew": "N",
                 "artistName": "MightyCat",
                 "language": "English",
-                "isDownload": "Y"                              //구매 여부
+                "isDownload": "Y",                              
+		"isWish": "N",					
             }
           ]
       }
@@ -471,7 +740,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```curl
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/download/9937" \ --header "apikey:xxxxxxxxx"
   ```  
-  
+
 ## 3 Analytics
 ### 3.1 Sticker Send Analytics 스티커 전송 통계
 
@@ -626,6 +895,771 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
   ```curl
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/category" \ --header "apikey:xxxxxxxxx"
   ```
+
+## 5 MySticker
+### 5.1 Wish Package 스티커팩 위시리스트에 추가, 삭제
+
+스티커팩 위시리스트에 추가, 삭제
+
+
+* **URL**
+
+  /v0.1/store/wish/:packageId
+
+* **Method:**
+
+  `PUT`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `packageId=[int]` 패키지 아이디 값
+
+* **Request Query Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": []
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request PUT "https://bapi.stipop.io/store/v0.1/wish/118?userId=9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
+
+### 5.2 Wish Package List 스티커팩 위시리스트 조회
+
+스티커팩 위시리스트 조회
+
+
+* **URL**
+
+  /v0.1/store/wish/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"packageList": [
+            {
+                "packageId": 118,
+                "artistName": "MightyCat",
+                "packageName": "Stuart",
+                "packageImg": "https://img....7.png",
+                "packageAnimated": "N",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Stuart,Sticker",
+                "isNew": "N",
+                "language": "English",
+                "isDownload": "Y"
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/wish/9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
+### 5.3 MySticker Package List 내 스트커팩 목록 조회
+
+ 내 스트커팩 목록 조회
+
+
+* **URL**
+
+  /v0.1/store/mysticker/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"packageList":"packageList": [
+            {
+                "packageId": 118,
+                "packageName": "Stuart",
+                "packageImg": "https://img....7.png",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Stuart,Sticker",
+                "packageAnimated": "N",
+                "isView": "Y",
+                "order": 1,
+                "isNew": "N",
+                "artistName": "MightyCat",
+                "language": "English",
+                "isDownload": "Y",
+                "isWish": "Y"
+            },
+            {
+                "packageId": 119,
+                "packageName": "The Boy",
+                "packageImg": "https://img...png",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Boy,Sticker",
+                "packageAnimated": "N",
+                "isView": "Y",
+                "order": 2,
+                "isNew": "N",
+                "artistName": "blueman_print",
+                "language": "English",
+                "isDownload": "Y",
+                "isWish": "N"
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/mysticker/9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
+### 5.4 MySticker Package Hide List 내 숨긴 스트커팩 목록 조회
+
+ 내 숨긴 스트커팩 목록 조회 
+
+
+* **URL**
+
+  /v0.1/store/mysticker/hide/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"packageList":"packageList": [
+            {
+                "packageId": 118,
+                "packageName": "Stuart",
+                "packageImg": "https://img....7.png",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Stuart,Sticker",
+                "packageAnimated": "N",
+                "isView": "Y",
+                "order": 1,
+                "isNew": "N",
+                "artistName": "MightyCat",
+                "language": "English",
+                "isDownload": "Y",
+                "isWish": "Y"
+            },
+            {
+                "packageId": 119,
+                "packageName": "The Boy",
+                "packageImg": "https://img...png",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Boy,Sticker",
+                "packageAnimated": "N",
+                "isView": "Y",
+                "order": 2,
+                "isNew": "N",
+                "artistName": "blueman_print",
+                "language": "English",
+                "isDownload": "Y",
+                "isWish": "N"
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/mysticker/hide/9937" \ --header "apikey:xxxxxxxxx"
+  ```
+
+
+### 5.5 MySticker Package Hide 스티커 숨김, 해제
+
+ 스트커팩 숨김, 해제
+
+
+* **URL**
+
+  /v0.1/store/mysticker/hide/:userId/:packageId
+
+* **Method:**
+
+  `PUT`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+  
+  `packageId=[int]` 패키지 아이디 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": []
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request PUT "https://bapi.stipop.io/store/v0.1/mysticker/hide/9937/118" \ --header "apikey:xxxxxxxxx"
+  ```
+
+
+## 6 Gift
+### 6.1 Gift Package 선물 보내기
+
+유저간 선물보내기
+
+
+* **URL**
+
+  /v0.1/store/gift/:packageId/:sendUserId/:receiveUserId
+
+* **Method:**
+
+  `POST`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `packageId=[int]` 패키지 아이디 값
+  
+  `sendUserId=[string]` 선물을 보내는 유저 고유값
+  
+  `receiveUserId=[string]` 선물을 받는 유저 고유값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": []
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request POST "https://bapi.stipop.io/store/v0.1/gift/118/9937/8805" \ --header "apikey:xxxxxxxxx"
+  ```
+
+### 6.2 Gift Package Confirm 선물 확인
+
+받은 선물 확인
+
+
+* **URL**
+
+  /v0.1/store/gift/:packageId/:sendUserId/:receiveUserId
+
+* **Method:**
+
+  `PUT`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+  `packageId=[int]` 패키지 아이디 값
+  
+  `sendUserId=[string]` 선물을 보내는 유저 고유값
+  
+  `receiveUserId=[string]` 선물을 받는 유저 고유값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": []
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request PUT "https://bapi.stipop.io/store/v0.1/gift/118/9937/8805" \ --header "apikey:xxxxxxxxx"
+  ```
+
+
+### 6.3 Send Gift Package List 보낸선물 목록
+
+받은 선물 확인
+
+
+* **URL**
+
+  /v0.1/store/gift/send/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+   `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"packageList": [
+            {
+                "packageId": 118,
+                "packageName": "Stuart",
+                "packageImg": "https://img..7.png",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Stuart,Sticker",
+                "sendUserId": "9937",				//보낸 사람 아이디
+                "receiveUserId": "8805",			//받는 사람 아이디
+                "isReceive": "Y",
+                "sendDate": "2020-07-07T03:09:41.000Z", 	//보낸 날짜
+                "receiveDate": "2020-07-07T03:11:38.000Z",	//받은 날짜
+                "packageAnimated": "N",
+                "isNew": "N",
+                "artistName": "MightyCat",
+                "language": "English",
+                "isDownload": "Y",
+                "isWish": "Y"
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/gift/send/9937 \ --header "apikey:xxxxxxxxx"
+  ```
+
+### 6.4 Receive Gift Package List 받은선물 목록
+
+받은 선물 확인
+
+
+* **URL**
+
+  /v0.1/store/gift/receive/:userId
+
+* **Method:**
+
+  `GET`
+  
+*  **Request Headers**
+
+   **Required:**
+ 
+   `apikey=[string]` Issued apikey value
+
+* **Request Path Parameters**
+
+  **Required:**
+  
+   `userId=[string]` 각 개별 사용자를 구분 할 수 있는 고유 값
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+    ```json
+    {
+      "header": {
+          "code": "0000",
+          "status": "success",
+          "message": "요청 성공"
+      },
+      "body": {
+      	"packageList": [
+            {
+                "packageId": 118,
+                "packageName": "Stuart",
+                "packageImg": "https://img..7.png",
+                "packageCategory": "Animation/Cartoon",
+                "packageKeywords": "Stuart,Sticker",
+                "sendUserId": "9937",				//보낸 사람 아이디
+                "receiveUserId": "8805",			//받는 사람 아이디
+                "isReceive": "Y",
+                "sendDate": "2020-07-07T03:09:41.000Z", 	//보낸 날짜
+                "receiveDate": "2020-07-07T03:11:38.000Z",	//받은 날짜
+                "packageAnimated": "N",
+                "isNew": "N",
+                "artistName": "MightyCat",
+                "language": "English",
+                "isDownload": "Y",
+                "isWish": "Y"
+            }
+        ]
+      }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "status": "fail",
+      "message": "non exist apikey",
+      "code": "9000"
+    }
+    ```
+    OR
+
+  * **Code:** 500 Internal Server error <br />
+    **Content:** 
+    ```json
+    {
+       "status" : "fail", 
+       "message": "server error", 
+       "code":"1000"
+    }
+    ```
+
+* **Sample Call:**
+
+  ```curl
+  curl --location --request GET "https://bapi.stipop.io/store/v0.1/gift/receive/9937 \ --header "apikey:xxxxxxxxx"
 
 
 ## Announcements :loudspeaker:
