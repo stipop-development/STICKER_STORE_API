@@ -4,7 +4,7 @@
 </h1>
 
 
-<h4 align="center">Generate revenue and propel user engagement with Stipop Store API</h4>
+<h4 align="center">이모티콘 스토어 API</h4>
 
 <p align="center">
   <a href="#Intro">Intro</a> •
