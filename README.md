@@ -78,7 +78,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 
 # API Document
 
-Base Url: "https://bapi.stipop.io" <br>
+Base Url: https://bapi.stipop.io <br>
 <br>
 Authentication: 스티팝 스토어 API는 API Key 인증을 통해 사용할 수 있습니다. API Key는 <a href="https://dashboard.stipop.io/signup" target="_blank">dashboard.stipop.io</a>에서 회원가입 후 앱 별로 Unique API Key를 발급 받을 수 있습니다.
 
@@ -905,10 +905,10 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/category" \ --header "apikey:xxxxxxxxx"
   ```
 
-## 5 MySticker
+## 5 My Sticker
 ### 5.1 Wish Package 스티커 팩 위시리스트에 추가, 삭제
 
-스티커 팩 위시리스트에 추가, 삭제
+스티커 팩 위시리스트에 추가, 삭제 API 입니다. 좋아요, 나중에 보기 등의 기능으로도 사용 될 수 있습니다. 
 
 
 * **URL**
@@ -984,7 +984,7 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
 
 ### 5.2 Wish Package List 스티커 팩 위시리스트 조회
 
-스티커 팩 위시리스트 조회
+유저가 위시리스트에 담은 스티커를 조회하는 API 입니다. 
 
 
 * **URL**
@@ -1066,9 +1066,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/wish/9937" \ --header "apikey:xxxxxxxxx"
   ```
 
-### 5.3 MySticker Package List 내 스트커팩 목록 조회
+### 5.3 My Sticker Package List 내 스티커 팩 목록 조회
 
- 내 스트커팩 목록 조회
+유저가 다운로드 한 스티커 팩을 조회할 수 있는 API 입니다. 
 
 
 * **URL**
@@ -1168,9 +1168,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/mysticker/9937" \ --header "apikey:xxxxxxxxx"
   ```
 
-### 5.4 MySticker Package Hide List 내 숨긴 스트커팩 목록 조회
+### 5.4 My Sticker Package Hide List 숨긴 스티커팩 목록 조회
 
- 내 숨긴 스트커팩 목록 조회 
+유저가 내 스티커 리스트에서 숨긴 스티커팩을 조회할 수 있는 API 입니다. 구매한 스티커를 삭제할 수 없기 때문에 'Hide/Recover' 기능으로 대신 할 수 있습니다. 5.5 숨김 및 해제 API를 통해 유저가 Hide 하거나 Recover 할 수 있습니다.
 
 
 * **URL**
@@ -1271,9 +1271,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   ```
 
 
-### 5.5 MySticker Package Hide 스티커 숨김, 해제
+### 5.5 My Sticker Package Hide & Recover 스티커 숨김 및 해제
 
- 스트커팩 숨김, 해제
+유저가 내 스티커 팩 리스트에서 사용하지 않는 스티커를 '숨김' 하거나 '숨김 해제' 할 수 있습니다. 보유한 스티커 팩이 10개가 넘어가면 사용이 불편하기 때문에 꼭 필요한 기능 중 하나입니다.
 
 
 * **URL**
@@ -1344,9 +1344,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
 
 
 ## 6 Gift
-### 6.1 Gift Package 선물 보내기
+### 6.1 Send Gift Package 선물 보내기
 
-유저간 선물보내기
+유저간 유료 스티커 팩을 선물 할 수 있는 API 입니다. 6.2 받은 선물 확인 API와 함께 사용 될 수 있습니다.
 
 
 * **URL**
@@ -1417,9 +1417,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   curl --location --request POST "https://bapi.stipop.io/store/v0.1/gift/118/9937/8805" \ --header "apikey:xxxxxxxxx"
   ```
 
-### 6.2 Gift Package Confirm 선물 확인
+### 6.2 Confirm Gift Package 선물 받음 확인
 
-받은 선물 확인
+유저 A가 유저 B에게 선물 보낸 스티커를 유저 B가 받았는지 유저 A가 확인할 수 있는 API 입니다. 6.1 선물 보내기 API와 함께 사용 될 수 있습니다.
 
 
 * **URL**
@@ -1491,9 +1491,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   ```
 
 
-### 6.3 Send Gift Package List 보낸선물 목록
+### 6.3 Sent Gift Package List 보낸선물 목록
 
-받은 선물 확인
+유저가 다른 유저에게 선물 보낸 스티커 팩 목록을 불러오는 API 입니다.
 
 
 * **URL**
@@ -1581,9 +1581,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
   curl --location --request GET "https://bapi.stipop.io/store/v0.1/gift/send/9937 \ --header "apikey:xxxxxxxxx"
   ```
 
-### 6.4 Receive Gift Package List 받은선물 목록
+### 6.4 Received Gift Package List 받은선물 목록
 
-받은 선물 확인
+유저가 다른 유저에게서 선물 받은 스티커 팩 목록을 불러오는 API 입니다.
 
 
 * **URL**
