@@ -78,7 +78,7 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 
 # API Document
 
-Base Url: <div style="display: inline">https://bapi.stipop.io</div> <br>
+Base Url: "https://bapi.stipop.io" <br>
 <br>
 Authentication: 스티팝 스토어 API는 API Key 인증을 통해 사용할 수 있습니다. API Key는 <a href="https://dashboard.stipop.io/signup" target="_blank">dashboard.stipop.io</a>에서 회원가입 후 앱 별로 Unique API Key를 발급 받을 수 있습니다.
 
