@@ -29,7 +29,7 @@
 ![Works with Android](https://img.shields.io/badge/Works_with-Android-green?style=flat-square)
 ![Works with iOS](https://img.shields.io/badge/Works_with-iOS-blue?style=flat-square)
 ![Works with JavaScript](https://img.shields.io/badge/Works_with-JavaScript-red?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/stipop-development/Sticker_Store_API?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/stipop-development/Sticker_Store_API_KR?style=flat-square)
 
 > 스티팝 스티커 스토어 API를 통해 서비스에서 새로운 수익을 창출할 수 있습니다.
 
@@ -73,8 +73,8 @@ v0.1은 스티커 스토어 개발을 위한 기본 기능/스티커를 테스�
 > 해당 Github Repository에 Bug 혹은 새로운 Feature 제안 Issue를 생성하실 수 있습니다.
 > 기타 문의사항은 <biz@stipop.io>에 연락 부탁드립니다.
 
-- [**Bug Report**](https://github.com/stipop-development/Sticker_Store_API/issues/new?template=bug_report.md) 생성하기
-- [**Feature Request**](https://github.com/stipop-development/Sticker_Store_API/issues/new?assignees=&labels=&template=feature_request.md) 생성하기
+- [**Bug Report**](https://github.com/stipop-development/Sticker_Store_API_KR/issues/new?template=bug_report.md) 생성하기
+- [**Feature Request**](https://github.com/stipop-development/Sticker_Store_API_KR/issues/new?assignees=&labels=&template=feature_request.md) 생성하기
 
 <h4 align="center">
   <br>
@@ -1676,9 +1676,9 @@ Authentication은 HTTP Basic Auth를 통해 실행됩니다. API Key를 Basic Au
 
 
 ## Announcements :loudspeaker:
-[Annoucements](https://github.com/stipop-development/Sticker_Store_API/wiki/Announcements)를 통해 최신 업데이트 내용을 확인할 수 있습니다.
+[Annoucements](https://github.com/stipop-development/Sticker_Store_API_KR/wiki/Announcements)를 통해 최신 업데이트 내용을 확인할 수 있습니다.
 
 
 ## License
 
-Stipop Sticker Store API is MIT licensed, as found in the [`LICENSE`](https://github.com/stipop-development/Sticker_Store_API/blob/master/LICENSE) file.
+Stipop Sticker Store API is MIT licensed, as found in the [`LICENSE`](https://github.com/stipop-development/Sticker_Store_API_KR/blob/master/LICENSE) file.
