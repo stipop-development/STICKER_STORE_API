@@ -35,7 +35,7 @@
 
 스티커는 가장 효과적이고 쉬운 감정표현이 가능합니다. 때문에 스티커는 온라인 이용자들에게 필수적인 요소입니다. 카카오톡에서만 사용되던 스티커를 당사 서비스에서 제공해보세요. 쉽고 빠른 설치를 통해 새로운 수익을 창출 할 수 있습니다. 저희는 스티커를 통해 이용자들이 온라인에서 더 효과적으로 커뮤니케이션 할 수 있도록 돕습니다. 
 
-아래 API 문서는 '스티커 스토어' 설치를 위한 문서입니다. 스티커 스토어가 아닌 '일반 스티커' 설치는 <a href="https://github.com/stipop-development/Sticker_Library_API/blob/master/README.md" target="_blank">여기서</a> 확인할 수 있습니다.
+아래 API 문서는 '스티커 스토어' 설치를 위한 문서입니다. 스티커 스토어가 아닌 '일반 스티커' 설치는 <a href="https://github.com/stipop-development/Sticker_Library_API_KR/blob/master/README.md" target="_blank">여기서</a> 확인할 수 있습니다.
 
 ## Key Features
 * 스티커 인기순위 조회
